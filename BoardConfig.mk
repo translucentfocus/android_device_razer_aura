@@ -2,13 +2,11 @@ DEVICE_TREE := device/razer/chery2
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
-# TODO get proper board name
-# TARGET_BOOTLOADER_BOARD_NAME := msm8998
+TARGET_BOOTLOADER_BOARD_NAME := sdm845
 
 # Platform
-#TODO update to correct info below
-# TARGET_BOARD_PLATFORM := msm8998
-# TARGET_BOARD_PLATFORM_GPU := qcom-adreno540
+TARGET_BOARD_PLATFORM := sdm845
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno630
 
 # Flags
 #TARGET_GLOBAL_CFLAGS +=
@@ -31,7 +29,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
 # Kernel
-#TARGET_KERNEL_SOURCE := kernel/razer/msm8998
+#TARGET_KERNEL_SOURCE := kernel/razer/sdm845
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := twrp_cheryl2_defconfig

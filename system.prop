@@ -1,0 +1,6 @@
+ro.sf.lcd_density=640
+ro.razer.lcd_default_brightness=158
+sys.usb.controller=a800000.dwc3
+ro.hardware.keystore=sdm845
+ro.hardware.gatekeeper=sdm845
+ro.hardware.bootctrl=sdm845

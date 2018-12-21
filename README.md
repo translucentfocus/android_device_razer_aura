@@ -5,7 +5,7 @@ Add to `.repo/local_manifests/cheryl2.xml`:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<!-- <project path="device/razer/cheryl2" name="android_device_razer_cheryl2" remote="TeamWin" revision="android-8.1" /> -->
+	<project path="device/razer/cheryl2" name="razer_cheryl2_kernelMR2" remote="translucentfocus" revision="omni-twrp-MR2" />
 </manifest>
 ```
 

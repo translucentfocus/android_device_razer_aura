@@ -37,12 +37,12 @@ TARGET_KERNEL_CONFIG := twrp_cheryl2_defconfig
 TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/Image.gz-dtb
 
 # Boot image
-#TODO verify/fix all of this
-#This is the board info from cheryl (1st generation)
+#TODO verify Kernel CMDLine
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 androidboot.hardware=qcom androidboot.selinux=permissive
+# Verified below from extracted boot.img using Android Kitchen ramdisk_offset needed to be updated
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x00000100
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 # Partitions
 # TODO fix partition addresses below

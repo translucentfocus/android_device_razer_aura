@@ -32,7 +32,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 #TARGET_KERNEL_SOURCE := kernel/razer/sdm845
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CONFIG := twrp_cheryl2_defconfig
+TARGET_KERNEL_CONFIG := twrp_aura_defconfig
 
 TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/Image.gz-dtb
 

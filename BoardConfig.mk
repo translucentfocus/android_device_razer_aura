@@ -86,8 +86,8 @@ TW_EXCLUDE_MTP := true
 # We can use the factory reset button combo to enter recovery safely
 TW_IGNORE_MISC_WIPE_DATA := true
 
-# exFAT drivers included in the kernel
-TW_NO_EXFAT_FUSE := true
+# exFAT drivers NOT included in stock aura kernel
+TW_NO_EXFAT_FUSE := false
 
 # Encryption support
 TW_INCLUDE_CRYPTO := true

@@ -1,12 +1,18 @@
 DEVICE_TREE := device/razer/aura
 
 # Bootloader
-TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := sdm845
+TARGET_NO_BOOTLOADER := true
+TARGET_USES_UEFI := true
+
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm845
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno630
+
+#Added on other SDM845 devices for crypto support
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+
 
 # Flags
 #TARGET_GLOBAL_CFLAGS +=
@@ -18,7 +24,6 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-#TODO verify kyro is correct
 TARGET_CPU_VARIANT := kryo
 TARGET_CPU_SMP := true
 
@@ -33,7 +38,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := twrp_aura_defconfig
-
 TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/Image.gz-dtb
 
 # Boot image
@@ -82,6 +86,8 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 BOARD_SUPPRESS_SECURE_ERASE := true
 # Stock kernel sometimes crashes when we toggle MTP
 TW_EXCLUDE_MTP := true
+# Just for building recovery
+ALLOW_MISSING_DEPENDCIES:=true
 
 # We can use the factory reset button combo to enter recovery safely
 TW_IGNORE_MISC_WIPE_DATA := true

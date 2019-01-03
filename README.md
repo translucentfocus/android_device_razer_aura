@@ -15,9 +15,9 @@ To build:
 
 ```sh
 . build/envsetup.sh
-lunch omni_cheryl2-eng
+lunch omni_aura-eng
 make -j5 recoveryimage
 ```
 
-//TODO
+# //TODO
 Kernel sources are available at: 

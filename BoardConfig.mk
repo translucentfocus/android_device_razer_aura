@@ -1,4 +1,4 @@
-DEVICE_TREE := device/razer/chery2
+DEVICE_TREE := device/razer/aura
 
 # Bootloader
 TARGET_NO_BOOTLOADER := true
@@ -58,12 +58,13 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # A/B device flags
 # set to false for recovery only image (source: https://forum.xda-developers.com/showpost.php?p=32965389&postcount=3)
-TARGET_NO_RECOVERY := false
+# TARGET_NO_RECOVERY := false
 # set to false for recovery only image (source: https://forum.xda-developers.com/showpost.php?p=32965389&postcount=3)
-BOARD_USES_RECOVERY_AS_BOOT := false
+# BOARD_USES_RECOVERY_AS_BOOT := false
 # Razer Phone 2 does use system root for image... not sure if this should be set or not though
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+# BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 # set to on (source: https://forum.xda-developers.com/showpost.php?p=32965389&postcount=3)
+# Dees Troy commented all of the above out as part of his work to enable crypto
 AB_OTA_UPDATER := true
 
 # TWRP specific build flags

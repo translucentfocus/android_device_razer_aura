@@ -87,7 +87,7 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 # Stock kernel sometimes crashes when we toggle MTP
 TW_EXCLUDE_MTP := true
 # Just for building recovery
-ALLOW_MISSING_DEPENDCIES:=true
+ALLOW_MISSING_DEPENDENCIES:=true
 
 # We can use the factory reset button combo to enter recovery safely
 TW_IGNORE_MISC_WIPE_DATA := true

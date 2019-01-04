@@ -1,4 +1,4 @@
-## WIP TWRP device tree for Razer Phone (2nd generation 'aura')
+## WIP TWRP device tree for Razer Phone 2 (2nd generation 'aura')
 
 Add to `.repo/local_manifests/cheryl2.xml`:
 

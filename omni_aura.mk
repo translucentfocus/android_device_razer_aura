@@ -17,6 +17,6 @@ PRODUCT_PACKAGES += \
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := aura
 PRODUCT_MODEL := Phone_2
-PRODUCT_NAME := cheryl2
+PRODUCT_NAME := omni_aura
 PRODUCT_BRAND := razer
 PRODUCT_MANUFACTURER := Razer

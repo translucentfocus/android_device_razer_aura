@@ -51,12 +51,12 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 # Workaround for error copying vendor files to recovery ramdisk
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
-TARGET_COPY_OUT_VENDOR := vendor
+# BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+# TARGET_COPY_OUT_VENDOR := vendor
 
 # Android Verified Boot
-BOARD_AVB_ENABLE := false
-BOARD_BUILD_DISABLED_VBMETAIMAGE := true
+# BOARD_AVB_ENABLE := false
+# BOARD_BUILD_DISABLED_VBMETAIMAGE := true
 
 # Partitions
 # Updated based off CalebQ42's sizes
@@ -83,17 +83,17 @@ TARGET_USERIMAGES_USE_F2FS := true
 # BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 # set to on (source: https://forum.xda-developers.com/showpost.php?p=32965389&postcount=3)
 # Dees Troy commented all of the above out as part of his work to enable crypto
-AB_OTA_UPDATER := true
+# AB_OTA_UPDATER := true
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
-TW_BRIGHTNESS_PATH := "/sys/devices/soc/c900000.qcom\x2cmdss_mdp/c900000.qcom\x2cmdss_mdp:qcom\x2cmdss_fb_primary/leds/lcd-backlight/brightness"
+# TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
+# TW_BRIGHTNESS_PATH := "/sys/devices/soc/c900000.qcom\x2cmdss_mdp/c900000.qcom\x2cmdss_mdp:qcom\x2cmdss_fb_primary/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 158
+TW_DEFAULT_BRIGHTNESS := 155
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INCLUDE_NTFS_3G := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
@@ -110,8 +110,8 @@ TW_IGNORE_MISC_WIPE_DATA := true
 TW_NO_EXFAT_FUSE := false
 
 # Encryption support
-TW_INCLUDE_CRYPTO := true
-TARGET_HW_DISK_ENCRYPTION := true
+# TW_INCLUDE_CRYPTO := true
+# TARGET_HW_DISK_ENCRYPTION := true
 #TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 
 # Asian region languages

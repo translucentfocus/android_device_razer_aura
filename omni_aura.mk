@@ -10,9 +10,9 @@ $(call inherit-product, vendor/omni/config/common.mk)
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/razer/aura/device.mk)
 
-PRODUCT_PACKAGES += \
-	charger_res_images \
-	charger
+# PRODUCT_PACKAGES += \
+#	charger_res_images \
+#	charger
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := aura

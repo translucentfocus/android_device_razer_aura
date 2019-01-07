@@ -23,4 +23,10 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_aura.mk
+ifneq ($(filter aura,$(TARGET_DEVICE)),)
+
+LOCAL_PATH := $(call my-dir)
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
+endif

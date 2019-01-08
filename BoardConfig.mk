@@ -1,10 +1,12 @@
 DEVICE_TREE := device/razer/aura
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := sdm845
+TARGET_BOOTLOADER_BOARD_NAME := cheryl2
 TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
-
+BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+BOARD_USES_QCOM_HARDWARE := true
 
 # Platform
 TARGET_BOARD_PLATFORM := sdm845
@@ -43,14 +45,15 @@ TARGET_PREBUILT_KERNEL := $(DEVICE_TREE)/Image.gz-dtb
 
 # Boot image
 #TODO verify Kernel CMDLine
-# pulled from stock Razer Phone 2 boot.img with Android Kitchen
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA84000 androidboot.hardware=qcom androidboot.console=ttyMSM0 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3
-# Verified below from extracted boot.img using Android Kitchen ramdisk_offset needed to be updated
+# pulled from stock Razer Phone 2 boot.img with Android Image Kitchen
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xA84000 androidboot.hardware=qcom androidboot.console=ttyMSM0 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a600000.dwc3 androidboot.selinux=permissive
+# Verified below from extracted boot.img using Android Image Kitchen ramdisk_offset needed to be updated
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 # Workaround for error copying vendor files to recovery ramdisk
+BOARD_USES_VENDORIMAGE := true
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
@@ -119,4 +122,4 @@ TW_EXTRA_LANGUAGES := true
 
 # Debug flags
 #TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
+# TARGET_USES_LOGD := true
